@@ -1,0 +1,686 @@
+
+;; Function softmax_q17p14_q15 (softmax_q17p14_q15, funcdef_no=141, decl_uid=10707, cgraph_uid=142, symbol_order=142)
+
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+;; Generating RTL for gimple basic block 5
+
+;; Generating RTL for gimple basic block 6
+
+;; Generating RTL for gimple basic block 7
+
+;; Generating RTL for gimple basic block 8
+
+;; Generating RTL for gimple basic block 9
+
+;; Generating RTL for gimple basic block 10
+
+;; Generating RTL for gimple basic block 11
+
+;; Generating RTL for gimple basic block 12
+Edge 2->4 redirected to 16
+Edge 10->12 redirected to 17
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Forwarding edge 2->4 to 17 failed.
+Forwarding edge 2->4 to 17 failed.
+Forwarding edge 15->16 to 17 failed.
+Removing jump 159.
+
+
+try_optimize_cfg iteration 2
+
+Forwarding edge 2->4 to 17 failed.
+Deleted label in block 4.
+Forwarding edge 15->16 to 17 failed.
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 12 NOTE_INSN_DELETED)
+(note 12 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 12 3 2 (set (reg/v/f:SI 158 [ vec_in ])
+        (reg:SI 0 r0 [ vec_in ])) "softmax.c":83:1 -1
+     (nil))
+(insn 3 2 4 2 (set (reg/v:SI 159 [ dim_vec ])
+        (reg:SI 1 r1 [ dim_vec ])) "softmax.c":83:1 -1
+     (nil))
+(insn 4 3 5 2 (set (reg/v/f:SI 160 [ p_out ])
+        (reg:SI 2 r2 [ p_out ])) "softmax.c":83:1 -1
+     (nil))
+(note 5 4 14 2 NOTE_INSN_FUNCTION_BEG)
+(debug_insn 14 5 15 2 (debug_marker) "softmax.c":84:5 -1
+     (nil))
+(debug_insn 15 14 16 2 (debug_marker) "softmax.c":85:5 -1
+     (nil))
+(debug_insn 16 15 17 2 (debug_marker) "softmax.c":86:5 -1
+     (nil))
+(debug_insn 17 16 18 2 (debug_marker) "softmax.c":87:5 -1
+     (nil))
+(debug_insn 18 17 19 2 (debug_marker) "softmax.c":88:5 -1
+     (nil))
+(debug_insn 19 18 20 2 (var_location:SI base (const_int -2147483648 [0xffffffff80000000])) "softmax.c":88:10 -1
+     (nil))
+(debug_insn 20 19 21 2 (debug_marker) "softmax.c":90:5 -1
+     (nil))
+(debug_insn 21 20 22 2 (var_location:SI base (const_int -2147483648 [0xffffffff80000000])) -1
+     (nil))
+(debug_insn 22 21 23 2 (var_location:HI i (const_int 0 [0])) -1
+     (nil))
+(debug_insn 23 22 24 2 (debug_marker) "softmax.c":90:19 discrim 1 -1
+     (nil))
+(insn 24 23 25 2 (set (reg:SI 136 [ _73 ])
+        (reg/v:SI 159 [ dim_vec ])) "softmax.c":90:19 discrim 1 -1
+     (nil))
+(insn 25 24 26 2 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 136 [ _73 ])
+            (const_int 0 [0]))) "softmax.c":90:19 discrim 1 -1
+     (nil))
+(jump_insn 26 25 27 2 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref:SI 167)
+            (pc))) "softmax.c":90:19 discrim 1 277 {arm_cond_branch}
+     (int_list:REG_BR_PROB 955630228 (nil))
+ -> 167)
+(note 27 26 28 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 28 27 29 4 (var_location:SI base (clobber (const_int 0 [0]))) "softmax.c":101:10 -1
+     (nil))
+(debug_insn 29 28 30 4 (var_location:SI sum (clobber (const_int 0 [0]))) -1
+     (nil))
+(debug_insn 30 29 31 4 (var_location:DI div_base (clobber (const_int 0 [0]))) "softmax.c":113:13 -1
+     (nil))
+(debug_insn 31 30 32 4 (var_location:SI output_base (clobber (const_int 0 [0]))) "softmax.c":114:13 -1
+     (nil))
+(debug_insn 32 31 33 4 (var_location:HI i (clobber (const_int 0 [0]))) -1
+     (nil))
+(jump_insn 33 32 34 4 (set (pc)
+        (label_ref 164)) "softmax.c":138:1 -1
+     (nil)
+ -> 164)
+(barrier 34 33 167)
+(code_label 167 34 166 5 8 (nil) [1 uses])
+(note 166 167 6 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 6 166 7 5 (set (reg/v:SI 120 [ _28 ])
+        (const_int -2147483648 [0xffffffff80000000])) "softmax.c":88:10 -1
+     (nil))
+(insn 7 6 35 5 (set (reg/v:SI 128 [ i ])
+        (const_int 0 [0])) "softmax.c":90:12 -1
+     (nil))
+(code_label 35 7 36 6 2 (nil) [1 uses])
+(note 36 35 37 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 37 36 38 6 (var_location:SI base (reg/v:SI 120 [ _28 ])) -1
+     (nil))
+(debug_insn 38 37 39 6 (var_location:HI i (subreg:HI (reg/v:SI 128 [ i ]) 0)) -1
+     (nil))
+(debug_insn 39 38 40 6 (debug_marker) "softmax.c":91:9 -1
+     (nil))
+(insn 40 39 41 6 (set (reg:SI 161 [ _2 ])
+        (ashift:SI (reg/v:SI 128 [ i ])
+            (const_int 2 [0x2]))) "softmax.c":91:19 -1
+     (nil))
+(insn 41 40 42 6 (set (reg:SI 162)
+        (mem:SI (plus:SI (reg/v/f:SI 158 [ vec_in ])
+                (reg:SI 161 [ _2 ])) [2 *_3+0 S4 A32])) "softmax.c":91:12 -1
+     (nil))
+(insn 42 41 43 6 (parallel [
+            (set (reg/v:SI 120 [ _28 ])
+                (smax:SI (reg/v:SI 120 [ _28 ])
+                    (reg:SI 162)))
+            (clobber (reg:CC 100 cc))
+        ]) "softmax.c":91:12 -1
+     (nil))
+(debug_insn 43 42 44 6 (var_location:SI base (reg/v:SI 120 [ _28 ])) -1
+     (nil))
+(debug_insn 44 43 45 6 (debug_marker) "softmax.c":90:31 discrim 2 -1
+     (nil))
+(insn 45 44 46 6 (set (reg:HI 163)
+        (subreg/s/u:HI (reg/v:SI 128 [ i ]) 0)) -1
+     (nil))
+(insn 46 45 47 6 (set (reg:SI 164)
+        (plus:SI (subreg:SI (reg:HI 163) 0)
+            (const_int 1 [0x1]))) -1
+     (nil))
+(insn 47 46 48 6 (set (reg:SI 140 [ _82 ])
+        (zero_extend:SI (subreg:HI (reg:SI 164) 0))) -1
+     (nil))
+(insn 48 47 49 6 (set (reg/v:SI 128 [ i ])
+        (sign_extend:SI (subreg/s/v:HI (reg:SI 140 [ _82 ]) 0))) "softmax.c":90:31 discrim 2 -1
+     (nil))
+(debug_insn 49 48 50 6 (var_location:SI base (reg/v:SI 120 [ _28 ])) -1
+     (nil))
+(debug_insn 50 49 51 6 (var_location:HI i (subreg:HI (reg/v:SI 128 [ i ]) 0)) -1
+     (nil))
+(debug_insn 51 50 52 6 (debug_marker) "softmax.c":90:19 discrim 1 -1
+     (nil))
+(insn 52 51 53 6 (set (reg:CC 100 cc)
+        (compare:CC (reg/v:SI 128 [ i ])
+            (reg:SI 136 [ _73 ]))) "softmax.c":90:19 discrim 1 -1
+     (nil))
+(jump_insn 53 52 54 6 (set (pc)
+        (if_then_else (lt (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 35)
+            (pc))) "softmax.c":90:19 discrim 1 -1
+     (int_list:REG_BR_PROB 955630228 (nil))
+ -> 35)
+(note 54 53 55 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 55 54 56 7 (debug_marker) "softmax.c":101:5 -1
+     (nil))
+(insn 56 55 57 7 (set (reg/v:SI 126 [ base ])
+        (plus:SI (reg/v:SI 120 [ _28 ])
+            (const_int -262144 [0xfffffffffffc0000]))) "softmax.c":101:10 -1
+     (nil))
+(debug_insn 57 56 58 7 (var_location:SI base (reg/v:SI 126 [ base ])) "softmax.c":101:10 -1
+     (nil))
+(debug_insn 58 57 59 7 (debug_marker) "softmax.c":103:5 -1
+     (nil))
+(debug_insn 59 58 60 7 (var_location:SI sum (const_int 0 [0])) "softmax.c":103:9 -1
+     (nil))
+(debug_insn 60 59 61 7 (debug_marker) "softmax.c":105:5 -1
+     (nil))
+(debug_insn 61 60 62 7 (var_location:HI i (const_int 0 [0])) -1
+     (nil))
+(debug_insn 62 61 63 7 (var_location:SI sum (const_int 0 [0])) -1
+     (nil))
+(debug_insn 63 62 8 7 (debug_marker) "softmax.c":105:19 discrim 1 -1
+     (nil))
+(insn 8 63 9 7 (set (reg/v:SI 147 [ i ])
+        (const_int 0 [0])) "softmax.c":105:12 -1
+     (nil))
+(insn 9 8 95 7 (set (reg/v:SI 146 [ sum ])
+        (const_int 0 [0])) "softmax.c":103:9 -1
+     (nil))
+(code_label 95 9 64 8 4 (nil) [1 uses])
+(note 64 95 65 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 65 64 66 8 (var_location:HI i (subreg:HI (reg/v:SI 147 [ i ]) 0)) -1
+     (nil))
+(debug_insn 66 65 67 8 (var_location:SI sum (reg/v:SI 146 [ sum ])) -1
+     (nil))
+(debug_insn 67 66 68 8 (debug_marker) "softmax.c":106:9 -1
+     (nil))
+(insn 68 67 69 8 (set (reg:SI 165 [ _99 ])
+        (ashift:SI (reg/v:SI 147 [ i ])
+            (const_int 2 [0x2]))) "softmax.c":106:19 -1
+     (nil))
+(insn 69 68 70 8 (set (reg:SI 150 [ _101 ])
+        (mem:SI (plus:SI (reg/v/f:SI 158 [ vec_in ])
+                (reg:SI 165 [ _99 ])) [2 *_100+0 S4 A32])) "softmax.c":106:19 -1
+     (nil))
+(insn 70 69 71 8 (set (reg:CC 100 cc)
+        (compare:CC (reg/v:SI 126 [ base ])
+            (reg:SI 150 [ _101 ]))) "softmax.c":106:12 -1
+     (nil))
+(jump_insn 71 70 72 8 (set (pc)
+        (if_then_else (ge (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 84)
+            (pc))) "softmax.c":106:12 -1
+     (int_list:REG_BR_PROB 536870916 (nil))
+ -> 84)
+(note 72 71 73 9 [bb 9] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 73 72 74 9 (debug_marker) "softmax.c":107:13 -1
+     (nil))
+(debug_insn 74 73 75 9 (var_location:QI shift (subreg:QI (ashiftrt:SI (plus:SI (minus:SI (reg:SI 150 [ _101 ])
+                    (reg/v:SI 126 [ base ]))
+                (const_int 8192 [0x2000]))
+            (const_int 14 [0xe])) 0)) "softmax.c":107:19 -1
+     (nil))
+(debug_insn 75 74 76 9 (debug_marker) "softmax.c":108:13 -1
+     (nil))
+(insn 76 75 77 9 (set (reg:SI 166 [ _102 ])
+        (plus:SI (reg:SI 150 [ _101 ])
+            (const_int 8192 [0x2000]))) "softmax.c":107:37 -1
+     (nil))
+(insn 77 76 78 9 (set (reg:SI 167 [ _103 ])
+        (minus:SI (reg:SI 166 [ _102 ])
+            (reg/v:SI 126 [ base ]))) "softmax.c":107:49 -1
+     (nil))
+(insn 78 77 79 9 (set (reg:SI 168 [ _104 ])
+        (ashiftrt:SI (reg:SI 167 [ _103 ])
+            (const_int 14 [0xe]))) "softmax.c":107:57 -1
+     (nil))
+(insn 79 78 80 9 (set (reg:SI 169 [ _105 ])
+        (zero_extend:SI (subreg:QI (reg:SI 168 [ _104 ]) 0))) "softmax.c":108:25 -1
+     (nil))
+(insn 80 79 81 9 (set (reg:SI 171)
+        (const_int 1 [0x1])) "softmax.c":108:25 -1
+     (nil))
+(insn 81 80 82 9 (set (reg:SI 170 [ _106 ])
+        (ashift:SI (reg:SI 171)
+            (reg:SI 169 [ _105 ]))) "softmax.c":108:25 -1
+     (nil))
+(insn 82 81 83 9 (set (reg/v:SI 146 [ sum ])
+        (plus:SI (reg/v:SI 146 [ sum ])
+            (reg:SI 170 [ _106 ]))) "softmax.c":108:17 -1
+     (nil))
+(debug_insn 83 82 84 9 (var_location:SI sum (reg/v:SI 146 [ sum ])) "softmax.c":108:17 -1
+     (nil))
+(code_label 84 83 85 10 3 (nil) [1 uses])
+(note 85 84 86 10 [bb 10] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 86 85 87 10 (var_location:SI sum (reg/v:SI 146 [ sum ])) -1
+     (nil))
+(debug_insn 87 86 88 10 (debug_marker) "softmax.c":105:31 discrim 2 -1
+     (nil))
+(insn 88 87 89 10 (set (reg:HI 172)
+        (subreg/s/u:HI (reg/v:SI 147 [ i ]) 0)) -1
+     (nil))
+(insn 89 88 90 10 (set (reg:SI 173)
+        (plus:SI (subreg:SI (reg:HI 172) 0)
+            (const_int 1 [0x1]))) -1
+     (nil))
+(insn 90 89 91 10 (set (reg:SI 122 [ _42 ])
+        (zero_extend:SI (subreg:HI (reg:SI 173) 0))) -1
+     (nil))
+(insn 91 90 92 10 (set (reg/v:SI 147 [ i ])
+        (sign_extend:SI (subreg/s/v:HI (reg:SI 122 [ _42 ]) 0))) "softmax.c":105:31 discrim 2 -1
+     (nil))
+(debug_insn 92 91 93 10 (var_location:HI i (subreg:HI (reg/v:SI 147 [ i ]) 0)) -1
+     (nil))
+(debug_insn 93 92 94 10 (var_location:SI sum (reg/v:SI 146 [ sum ])) -1
+     (nil))
+(debug_insn 94 93 96 10 (debug_marker) "softmax.c":105:19 discrim 1 -1
+     (nil))
+(insn 96 94 97 10 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 136 [ _73 ])
+            (reg/v:SI 147 [ i ]))) "softmax.c":105:19 discrim 1 -1
+     (nil))
+(jump_insn 97 96 98 10 (set (pc)
+        (if_then_else (gt (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 95)
+            (pc))) "softmax.c":105:19 discrim 1 -1
+     (int_list:REG_BR_PROB 955630228 (nil))
+ -> 95)
+(note 98 97 99 11 [bb 11] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 99 98 100 11 (debug_marker) "softmax.c":113:5 -1
+     (nil))
+(debug_insn 100 99 101 11 (var_location:DI div_base (const_int 4294967296 [0x100000000])) "softmax.c":113:13 -1
+     (nil))
+(debug_insn 101 100 102 11 (debug_marker) "softmax.c":114:5 -1
+     (nil))
+(insn 102 101 103 11 (set (reg:SI 175)
+        (ashiftrt:SI (reg/v:SI 146 [ sum ])
+            (const_int 31 [0x1f]))) "softmax.c":114:46 -1
+     (nil))
+(insn 103 102 104 11 (set (subreg:SI (reg:DI 174 [ _20 ]) 0)
+        (reg/v:SI 146 [ sum ])) "softmax.c":114:46 -1
+     (nil))
+(insn 104 103 105 11 (set (subreg:SI (reg:DI 174 [ _20 ]) 4)
+        (reg:SI 175)) "softmax.c":114:46 -1
+     (nil))
+(insn 105 104 106 11 (set (reg:DI 2 r2)
+        (reg:DI 174 [ _20 ])) "softmax.c":114:46 -1
+     (nil))
+(insn 106 105 107 11 (set (reg:DI 0 r0)
+        (const_int 4294967296 [0x100000000])) "softmax.c":114:46 -1
+     (nil))
+(call_insn/u 107 106 108 11 (parallel [
+            (set (reg:DI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("__aeabi_ldivmod") [flags 0x41]  <function_decl 0x789fce001f00 __aeabi_ldivmod>) [0  S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) "softmax.c":114:46 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:SI ("__aeabi_ldivmod") [flags 0x41]  <function_decl 0x789fce001f00 __aeabi_ldivmod>)
+        (expr_list:REG_EH_REGION (const_int -2147483648 [0xffffffff80000000])
+            (nil)))
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list (use (reg:DI 2 r2))
+            (expr_list (use (reg:DI 0 r0))
+                (nil)))))
+(insn 108 107 109 11 (set (reg:DI 179 [ _21 ])
+        (reg:DI 0 r0)) "softmax.c":114:46 -1
+     (expr_list:REG_EQUAL (div:DI (const_int 4294967296 [0x100000000])
+            (reg:DI 174 [ _20 ]))
+        (nil)))
+(insn 109 108 110 11 (set (reg/v:SI 127 [ output_base ])
+        (subreg:SI (reg:DI 179 [ _21 ]) 0)) "softmax.c":114:13 -1
+     (nil))
+(debug_insn 110 109 111 11 (var_location:SI output_base (reg/v:SI 127 [ output_base ])) "softmax.c":114:13 -1
+     (nil))
+(debug_insn 111 110 112 11 (debug_marker) "softmax.c":115:5 -1
+     (nil))
+(debug_insn 112 111 113 11 (debug_marker) "softmax.c":122:5 -1
+     (nil))
+(debug_insn 113 112 114 11 (var_location:HI i (const_int 0 [0])) -1
+     (nil))
+(debug_insn 114 113 10 11 (debug_marker) "softmax.c":122:19 discrim 1 -1
+     (nil))
+(insn 10 114 155 11 (set (reg/v:SI 125 [ i ])
+        (const_int 0 [0])) "softmax.c":122:12 -1
+     (nil))
+(code_label 155 10 115 12 6 (nil) [1 uses])
+(note 115 155 116 12 [bb 12] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 116 115 117 12 (var_location:HI i (subreg:HI (reg/v:SI 125 [ i ]) 0)) -1
+     (nil))
+(debug_insn 117 116 118 12 (debug_marker) "softmax.c":123:9 -1
+     (nil))
+(insn 118 117 119 12 (set (reg:SI 180 [ _87 ])
+        (ashift:SI (reg/v:SI 125 [ i ])
+            (const_int 2 [0x2]))) "softmax.c":123:19 -1
+     (nil))
+(insn 119 118 120 12 (set (reg:SI 142 [ _85 ])
+        (mem:SI (plus:SI (reg/v/f:SI 158 [ vec_in ])
+                (reg:SI 180 [ _87 ])) [2 *_86+0 S4 A32])) "softmax.c":123:19 -1
+     (nil))
+(insn 120 119 121 12 (set (reg:SI 181 [ _84 ])
+        (ashift:SI (reg/v:SI 125 [ i ])
+            (const_int 1 [0x1]))) "softmax.c":132:18 -1
+     (nil))
+(insn 121 120 122 12 (set (reg/f:SI 139 [ _81 ])
+        (plus:SI (reg/v/f:SI 160 [ p_out ])
+            (reg:SI 181 [ _84 ]))) "softmax.c":132:18 -1
+     (nil))
+(insn 122 121 123 12 (set (reg:CC 100 cc)
+        (compare:CC (reg/v:SI 126 [ base ])
+            (reg:SI 142 [ _85 ]))) "softmax.c":123:12 -1
+     (nil))
+(jump_insn 123 122 124 12 (set (pc)
+        (if_then_else (ge (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref:SI 171)
+            (pc))) "softmax.c":123:12 277 {arm_cond_branch}
+     (int_list:REG_BR_PROB 536870916 (nil))
+ -> 171)
+(note 124 123 125 13 [bb 13] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 125 124 126 13 (debug_marker) "softmax.c":125:13 -1
+     (nil))
+(debug_insn 126 125 127 13 (var_location:SI D#2 (plus:SI (reg/v:SI 120 [ _28 ])
+        (const_int -253953 [0xfffffffffffc1fff]))) "softmax.c":125:43 -1
+     (nil))
+(debug_insn 127 126 128 13 (var_location:QI shift (plus:QI (subreg:QI (ashiftrt:SI (minus:SI (debug_expr:SI D#2)
+                    (reg:SI 142 [ _85 ]))
+                (const_int 14 [0xe])) 0)
+        (const_int 17 [0x11]))) "softmax.c":125:19 -1
+     (nil))
+(debug_insn 128 127 162 13 (debug_marker) "softmax.c":127:13 -1
+     (nil))
+(debug_insn 162 128 129 13 (var_location:SI D#3 (ashiftrt:SI (minus:SI (debug_expr:SI D#2)
+            (reg:SI 142 [ _85 ]))
+        (const_int 14 [0xe]))) "softmax.c":122:19 discrim 1 -1
+     (nil))
+(debug_insn 129 162 130 13 (var_location:SI out (ashiftrt:SI (reg/v:SI 127 [ output_base ])
+        (zero_extend:SI (plus:QI (subreg:QI (debug_expr:SI D#3) 0)
+                (const_int 17 [0x11]))))) "softmax.c":127:17 -1
+     (nil))
+(debug_insn 130 129 163 13 (debug_marker) "softmax.c":129:13 -1
+     (nil))
+(debug_insn 163 130 131 13 (var_location:QI D#4 (subreg:QI (ashiftrt:SI (minus:SI (debug_expr:SI D#2)
+                (reg:SI 142 [ _85 ]))
+            (const_int 14 [0xe])) 0)) "softmax.c":122:19 discrim 1 -1
+     (nil))
+(debug_insn 131 163 132 13 (var_location:SI out (smin:SI (ashiftrt:SI (reg/v:SI 127 [ output_base ])
+            (zero_extend:SI (plus:QI (debug_expr:QI D#4)
+                    (const_int 17 [0x11]))))
+        (const_int 32767 [0x7fff]))) -1
+     (nil))
+(debug_insn 132 131 133 13 (debug_marker) "softmax.c":132:13 -1
+     (nil))
+(insn 133 132 134 13 (set (reg:SI 183)
+        (const_int -253953 [0xfffffffffffc1fff])) "softmax.c":125:43 -1
+     (nil))
+(insn 134 133 135 13 (set (reg:SI 184 [ _76 ])
+        (plus:SI (reg/v:SI 120 [ _28 ])
+            (reg:SI 183))) "softmax.c":125:43 -1
+     (nil))
+(insn 135 134 136 13 (set (reg:SI 185 [ _74 ])
+        (minus:SI (reg:SI 184 [ _76 ])
+            (reg:SI 142 [ _85 ]))) "softmax.c":125:50 -1
+     (nil))
+(insn 136 135 137 13 (set (reg:SI 186 [ _72 ])
+        (ashiftrt:SI (reg:SI 185 [ _74 ])
+            (const_int 14 [0xe]))) "softmax.c":125:63 -1
+     (nil))
+(insn 137 136 138 13 (set (reg:QI 187)
+        (subreg:QI (reg:SI 186 [ _72 ]) 0)) "softmax.c":125:19 -1
+     (nil))
+(insn 138 137 139 13 (set (reg:SI 188)
+        (plus:SI (subreg:SI (reg:QI 187) 0)
+            (const_int 17 [0x11]))) "softmax.c":125:19 -1
+     (nil))
+(insn 139 138 140 13 (set (reg:SI 189 [ _69 ])
+        (zero_extend:SI (subreg:QI (reg:SI 188) 0))) "softmax.c":127:32 -1
+     (nil))
+(insn 140 139 141 13 (set (reg:SI 182 [ out_68 ])
+        (ashiftrt:SI (reg/v:SI 127 [ output_base ])
+            (reg:SI 189 [ _69 ]))) "softmax.c":127:17 -1
+     (nil))
+(insn 141 140 142 13 (set (reg:SI 190)
+        (const_int 32767 [0x7fff])) "softmax.c":129:16 -1
+     (nil))
+(insn 142 141 143 13 (parallel [
+            (set (reg:SI 182 [ out_68 ])
+                (smin:SI (reg:SI 182 [ out_68 ])
+                    (reg:SI 190)))
+            (clobber (reg:CC 100 cc))
+        ]) "softmax.c":129:16 -1
+     (nil))
+(insn 143 142 168 13 (set (reg:SI 129 [ _65 ])
+        (sign_extend:SI (subreg:HI (reg:SI 182 [ out_68 ]) 0))) "softmax.c":132:24 -1
+     (nil))
+(jump_insn 168 143 169 13 (set (pc)
+        (label_ref 144)) -1
+     (nil)
+ -> 144)
+(barrier 169 168 171)
+(code_label 171 169 170 14 9 (nil) [1 uses])
+(note 170 171 11 14 [bb 14] NOTE_INSN_BASIC_BLOCK)
+(insn 11 170 144 14 (set (reg:SI 129 [ _65 ])
+        (const_int 0 [0])) "softmax.c":123:12 -1
+     (nil))
+(code_label 144 11 145 15 5 (nil) [1 uses])
+(note 145 144 146 15 [bb 15] NOTE_INSN_BASIC_BLOCK)
+(insn 146 145 147 15 (set (reg:HI 191)
+        (subreg/s/u:HI (reg:SI 129 [ _65 ]) 0)) "softmax.c":132:22 -1
+     (nil))
+(insn 147 146 148 15 (set (mem:HI (reg/f:SI 139 [ _81 ]) [1 *_81+0 S2 A16])
+        (reg:HI 191)) "softmax.c":132:22 -1
+     (nil))
+(debug_insn 148 147 149 15 (debug_marker) "softmax.c":122:31 discrim 2 -1
+     (nil))
+(insn 149 148 150 15 (set (reg:HI 192)
+        (subreg/s/u:HI (reg/v:SI 125 [ i ]) 0)) -1
+     (nil))
+(insn 150 149 151 15 (set (reg:SI 193)
+        (plus:SI (subreg:SI (reg:HI 192) 0)
+            (const_int 1 [0x1]))) -1
+     (nil))
+(insn 151 150 152 15 (set (reg:SI 121 [ _34 ])
+        (zero_extend:SI (subreg:HI (reg:SI 193) 0))) -1
+     (nil))
+(insn 152 151 153 15 (set (reg/v:SI 125 [ i ])
+        (sign_extend:SI (subreg/s/v:HI (reg:SI 121 [ _34 ]) 0))) "softmax.c":122:31 discrim 2 -1
+     (nil))
+(debug_insn 153 152 154 15 (var_location:HI i (subreg:HI (reg/v:SI 125 [ i ]) 0)) -1
+     (nil))
+(debug_insn 154 153 156 15 (debug_marker) "softmax.c":122:19 discrim 1 -1
+     (nil))
+(insn 156 154 157 15 (set (reg:CC 100 cc)
+        (compare:CC (reg/v:SI 125 [ i ])
+            (reg:SI 136 [ _73 ]))) "softmax.c":122:19 discrim 1 -1
+     (nil))
+(jump_insn 157 156 161 15 (set (pc)
+        (if_then_else (lt (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 155)
+            (pc))) "softmax.c":122:19 discrim 1 -1
+     (int_list:REG_BR_PROB 955630228 (nil))
+ -> 155)
+(note 161 157 164 16 [bb 16] NOTE_INSN_BASIC_BLOCK)
+(code_label 164 161 165 17 1 (nil) [1 uses])
+(note 165 164 0 17 [bb 17] NOTE_INSN_BASIC_BLOCK)
+
+;; Function softmax_shift_q17p14_q15 (softmax_shift_q17p14_q15, funcdef_no=142, decl_uid=10712, cgraph_uid=143, symbol_order=143)
+
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+;; Generating RTL for gimple basic block 5
+deleting block 8
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Forwarding edge 6->7 to 4 failed.
+
+
+try_optimize_cfg iteration 2
+
+Forwarding edge 6->7 to 4 failed.
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 8 NOTE_INSN_DELETED)
+(note 8 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 8 3 2 (set (reg/v/f:SI 124 [ vec_in ])
+        (reg:SI 0 r0 [ vec_in ])) "softmax.c":161:1 -1
+     (nil))
+(insn 3 2 4 2 (set (reg/v:SI 125 [ dim_vec ])
+        (reg:SI 1 r1 [ dim_vec ])) "softmax.c":161:1 -1
+     (nil))
+(insn 4 3 5 2 (set (reg/v:SI 126 [ in_shift ])
+        (reg:SI 2 r2 [ in_shift ])) "softmax.c":161:1 -1
+     (nil))
+(insn 5 4 6 2 (set (reg/v/f:SI 127 [ p_out ])
+        (reg:SI 3 r3 [ p_out ])) "softmax.c":161:1 -1
+     (nil))
+(note 6 5 10 2 NOTE_INSN_FUNCTION_BEG)
+(debug_insn 10 6 11 2 (debug_marker) "softmax.c":162:5 -1
+     (nil))
+(debug_insn 11 10 12 2 (debug_marker) "softmax.c":164:5 -1
+     (nil))
+(debug_insn 12 11 13 2 (var_location:HI i (const_int 0 [0])) -1
+     (nil))
+(debug_insn 13 12 14 2 (debug_marker) "softmax.c":164:19 discrim 1 -1
+     (nil))
+(insn 14 13 15 2 (set (reg:SI 120 [ _24 ])
+        (reg/v:SI 125 [ dim_vec ])) "softmax.c":164:19 discrim 1 -1
+     (nil))
+(insn 15 14 16 2 (set (reg:CC 100 cc)
+        (compare:CC (reg/v:SI 125 [ dim_vec ])
+            (const_int 0 [0]))) "softmax.c":164:19 discrim 1 -1
+     (nil))
+(jump_insn 16 15 45 2 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 24)
+            (pc))) "softmax.c":164:19 discrim 1 -1
+     (int_list:REG_BR_PROB 955630228 (nil))
+ -> 24)
+(code_label 45 16 17 4 23 (nil) [1 uses])
+(note 17 45 18 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 18 17 19 4 (debug_marker) "softmax.c":168:5 -1
+     (nil))
+(insn 19 18 20 4 (set (reg:SI 2 r2)
+        (reg/v/f:SI 127 [ p_out ])) "softmax.c":168:5 -1
+     (nil))
+(insn 20 19 21 4 (set (reg:SI 1 r1)
+        (reg/v:SI 125 [ dim_vec ])) "softmax.c":168:5 -1
+     (nil))
+(insn 21 20 22 4 (set (reg:SI 0 r0)
+        (reg/v/f:SI 124 [ vec_in ])) "softmax.c":168:5 -1
+     (nil))
+(call_insn/j 22 21 23 4 (parallel [
+            (call (mem:SI (symbol_ref:SI ("softmax_q17p14_q15") [flags 0x3]  <function_decl 0x789fcdb67700 softmax_q17p14_q15>) [0 softmax_q17p14_q15 S4 A32])
+                (const_int 0 [0]))
+            (return)
+            (use (const_int 0 [0]))
+        ]) "softmax.c":168:5 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:SI ("softmax_q17p14_q15") [flags 0x3]  <function_decl 0x789fcdb67700 softmax_q17p14_q15>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (expr_list:HI (use (reg:SI 1 r1))
+                (expr_list:SI (use (reg:SI 2 r2))
+                    (nil))))))
+(barrier 23 22 24)
+(code_label 24 23 25 5 21 (nil) [1 uses])
+(note 25 24 26 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 26 25 7 5 (set (reg:SI 123 [ _31 ])
+        (reg/v:SI 126 [ in_shift ])) "softmax.c":165:19 -1
+     (nil))
+(insn 7 26 42 5 (set (reg/v:SI 119 [ i ])
+        (const_int 0 [0])) "softmax.c":164:12 -1
+     (nil))
+(code_label 42 7 27 6 22 (nil) [1 uses])
+(note 27 42 28 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(debug_insn 28 27 29 6 (var_location:HI i (subreg:HI (reg/v:SI 119 [ i ]) 0)) -1
+     (nil))
+(debug_insn 29 28 30 6 (debug_marker) "softmax.c":165:9 -1
+     (nil))
+(insn 30 29 31 6 (set (reg:SI 128 [ _2 ])
+        (ashift:SI (reg/v:SI 119 [ i ])
+            (const_int 2 [0x2]))) "softmax.c":165:15 -1
+     (nil))
+(insn 31 30 32 6 (set (reg/f:SI 115 [ _3 ])
+        (plus:SI (reg/v/f:SI 124 [ vec_in ])
+            (reg:SI 128 [ _2 ]))) "softmax.c":165:15 -1
+     (nil))
+(insn 32 31 33 6 (set (reg:SI 130)
+        (mem:SI (reg/f:SI 115 [ _3 ]) [2 *_3+0 S4 A32])) "softmax.c":165:19 -1
+     (nil))
+(insn 33 32 34 6 (set (reg:SI 129 [ _6 ])
+        (ashift:SI (reg:SI 130)
+            (reg:SI 123 [ _31 ]))) "softmax.c":165:19 -1
+     (nil))
+(insn 34 33 35 6 (set (mem:SI (reg/f:SI 115 [ _3 ]) [2 *_3+0 S4 A32])
+        (reg:SI 129 [ _6 ])) "softmax.c":165:19 -1
+     (nil))
+(debug_insn 35 34 36 6 (debug_marker) "softmax.c":164:31 discrim 3 -1
+     (nil))
+(insn 36 35 37 6 (set (reg:HI 131)
+        (subreg/s/u:HI (reg/v:SI 119 [ i ]) 0)) -1
+     (nil))
+(insn 37 36 38 6 (set (reg:SI 132)
+        (plus:SI (subreg:SI (reg:HI 131) 0)
+            (const_int 1 [0x1]))) -1
+     (nil))
+(insn 38 37 39 6 (set (reg:SI 121 [ _29 ])
+        (zero_extend:SI (subreg:HI (reg:SI 132) 0))) -1
+     (nil))
+(insn 39 38 40 6 (set (reg/v:SI 119 [ i ])
+        (sign_extend:SI (subreg/s/v:HI (reg:SI 121 [ _29 ]) 0))) "softmax.c":164:31 discrim 3 -1
+     (nil))
+(debug_insn 40 39 41 6 (var_location:HI i (subreg:HI (reg/v:SI 119 [ i ]) 0)) -1
+     (nil))
+(debug_insn 41 40 43 6 (debug_marker) "softmax.c":164:19 discrim 1 -1
+     (nil))
+(insn 43 41 44 6 (set (reg:CC 100 cc)
+        (compare:CC (reg/v:SI 119 [ i ])
+            (reg:SI 120 [ _24 ]))) "softmax.c":164:19 discrim 1 -1
+     (nil))
+(jump_insn 44 43 48 6 (set (pc)
+        (if_then_else (lt (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 42)
+            (pc))) "softmax.c":164:19 discrim 1 -1
+     (int_list:REG_BR_PROB 955630228 (nil))
+ -> 42)
+(note 48 44 46 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(jump_insn 46 48 47 7 (set (pc)
+        (label_ref 45)) -1
+     (nil)
+ -> 45)
+(barrier 47 46 0)
