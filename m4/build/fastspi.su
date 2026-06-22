@@ -1,0 +1,9 @@
+/home/student/.local/share/com.analog.cfs/packages/conan/p/msdk8c9ed4d433027/p/Libraries/CMSIS/5.9.0/Core/Include/core_cm4.h:1684:22:__NVIC_EnableIRQ	0	static
+/home/student/.local/share/com.analog.cfs/packages/conan/p/msdk8c9ed4d433027/p/Libraries/MiscDrivers/SRAM/fastspi.c:41:13:DMA_TX_IRQHandler	0	static
+/home/student/.local/share/com.analog.cfs/packages/conan/p/msdk8c9ed4d433027/p/Libraries/MiscDrivers/SRAM/fastspi.c:57:13:DMA_RX_IRQHandler	0	static
+/home/student/.local/share/com.analog.cfs/packages/conan/p/msdk8c9ed4d433027/p/Libraries/MiscDrivers/SRAM/fastspi.c:73:6:FastSPI_IRQHandler	0	static
+/home/student/.local/share/com.analog.cfs/packages/conan/p/msdk8c9ed4d433027/p/Libraries/MiscDrivers/SRAM/fastspi.c:91:5:_dma_init	8	static
+/home/student/.local/share/com.analog.cfs/packages/conan/p/msdk8c9ed4d433027/p/Libraries/MiscDrivers/SRAM/fastspi.c:142:5:spi_init	8	static
+/home/student/.local/share/com.analog.cfs/packages/conan/p/msdk8c9ed4d433027/p/Libraries/MiscDrivers/SRAM/fastspi.c:196:5:spi_transmit	24	static
+/home/student/.local/share/com.analog.cfs/packages/conan/p/msdk8c9ed4d433027/p/Libraries/MiscDrivers/SRAM/fastspi.c:299:5:spi_exit_quadmode	8	static
+/home/student/.local/share/com.analog.cfs/packages/conan/p/msdk8c9ed4d433027/p/Libraries/MiscDrivers/SRAM/fastspi.c:304:5:spi_enter_quadmode	8	static

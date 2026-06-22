@@ -1,0 +1,12 @@
+{
+  "Soc": "MAX78000",
+  "Package": "CTBGA",
+  "WorkspacePluginId": "com.analog.singlecore.msdk.helloworld",
+  "WorkspacePluginVersion": "1.0.2",
+  "WorkspaceName": "062226_Test2",
+  "Location": "/home/student/analog/cfs/2.1.0",
+  "Board": "FTHR",
+  "Projects": [],
+  "DataModelVersion": "1.3.98",
+  "DataModelSchemaVersion": "1.2.0"
+}

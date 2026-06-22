@@ -1,0 +1,2 @@
+soc_init.c:19:5:PinInit	80	static
+soc_init.c:126:5:PeripheralInit	8	static

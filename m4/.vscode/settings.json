@@ -1,0 +1,15 @@
+{
+  "C_Cpp.default.forcedInclude": [
+    "${workspaceFolder}/build/project_defines.h"
+  ],
+  "cfs.project.target": "MAX78000",
+  "cfs.jlink.device": "MAX78000",
+  "cfs.project.board": "FTHR_RevA",
+  "cfs.programFile": "${workspaceFolder}/build/${workspaceFolderBasename}.elf",
+  "cfs.debugPath": "${workspaceFolder}/build",
+  "cfs.configureWorkspace": "Yes",
+  "cfs.project.firmwarePlatform": "MSDK",
+  "cfs.openocd.target": "target/max78000.cfg",
+  "cfs.openocd.interface": "interface/cmsis-dap.cfg",
+  "cfs.cmsis.svdFile": "${command:cfs.tool.path.msdk}/Libraries/CMSIS/Device/Maxim/MAX78000/Include/max78000.svd"
+}

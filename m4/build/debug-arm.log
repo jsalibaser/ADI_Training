@@ -1,0 +1,392 @@
+=cmd-param-changed,param="logging enabled",value="on"
+14^done
+(gdb) 
+~"Temporary breakpoint 1 at 0x100088dc\n"
+=breakpoint-created,bkpt={number="1",type="breakpoint",disp="del",enabled="y",addr="0x100088dc",at="<abort+4>",thread-groups=["i1"],times="0",original-location="abort"}
+~"Note: automatically using hardware breakpoints for read-only addresses.\n"
+15^done
+(gdb) 
+~"Temporary breakpoint 2 at 0x10008970\n"
+=breakpoint-created,bkpt={number="2",type="breakpoint",disp="del",enabled="y",addr="0x10008970",at="<_exit>",thread-groups=["i1"],times="0",original-location="_exit"}
+16^done
+(gdb) 
+=cmd-param-changed,param="remotetimeout",value="60"
+17^done
+(gdb) 
+@"SWD DPIDR 0x2ba01477\n"
+@"[max32xxx.cpu] halted due to debug-request, current mode: Thread \n"
+@"xPSR: 0x81000000 pc: 0x00002124 msp: 0x20003ff0\n"
+18^done
+(gdb) 
+19+download,{section=".text",section-size="40320",total-size="468398"}
+19+download,{section=".text",section-sent="16064",section-size="40320",total-sent="16064",total-size="468398"}
+19+download,{section=".ARM.exidx",section-size="8",total-size="468398"}
+19+download,{section=".data",section-size="2284",total-size="468398"}
+19+download,{section=".shared",section-size="4",total-size="468398"}
+19^done,address="0x10000630",load-size="42616",transfer-rate="193816",write-rate="7102"
+(gdb) 
+@"SWD DPIDR 0x2ba01477\n"
+@"[max32xxx.cpu] halted due to breakpoint, current mode: Thread \n"
+@"xPSR: 0x81000000 pc: 0x00002124 msp: 0x20003ff0\n"
+20^done
+(gdb) 
+~"The target architecture is set to \"auto\" (currently \"armv7e-m\").\n"
+21^done
+(gdb) 
+22^done,bkpt={number="3",type="breakpoint",disp="del",enabled="y",addr="0x1000037c",func="main",file="src/main.c",fullname="/home/student/analog/cfs/2.1.0/062226_Test2/m4/src/main.c",line="24",thread-groups=["i1"],times="0",original-location="-function main"}
+(gdb) 
+23^running
+*running,thread-id="all"
+(gdb) 
+=thread-created,id="2",group-id="i1"
+~"[New Thread 1]\n"
+=breakpoint-modified,bkpt={number="3",type="breakpoint",disp="del",enabled="y",addr="0x1000037c",func="main",file="src/main.c",fullname="/home/student/analog/cfs/2.1.0/062226_Test2/m4/src/main.c",line="24",thread-groups=["i1"],times="1",original-location="-function main"}
+~"[Remote target exited]\n"
+=thread-exited,id="1",group-id="i1"
+~"[Switching to Thread 1]\n"
+~"\n"
+~"Thread 2 \"max32xxx.cpu\" hit Temporary breakpoint 3, main () at src/main.c:24\n"
+~"24\tint main(void) {\n"
+*stopped,reason="breakpoint-hit",disp="del",bkptno="3",frame={addr="0x1000037c",func="main",args=[],file="src/main.c",fullname="/home/student/analog/cfs/2.1.0/062226_Test2/m4/src/main.c",line="24",arch="armv7e-m"},thread-id="2",stopped-threads="all"
+=breakpoint-deleted,id="3"
+24^done,thread-ids={thread-id="2"},current-thread-id="2",number-of-threads="1"
+(gdb) 
+~"The target architecture is set to \"auto\" (currently \"armv7e-m\").\n"
+25^done
+(gdb) 
+26^done,threads=[{id="2",target-id="Thread 1",details="Name: max32xxx.cpu, state: breakpoint",name="max32xxx.cpu",frame={level="0",addr="0x1000037c",func="main",args=[],file="src/main.c",fullname="/home/student/analog/cfs/2.1.0/062226_Test2/m4/src/main.c",line="24",arch="armv7e-m"},state="stopped"}]
+(gdb) 
+27^done,stack=[frame={level="0",addr="0x1000037c",func="main",file="src/main.c",fullname="/home/student/analog/cfs/2.1.0/062226_Test2/m4/src/main.c",line="24",arch="armv7e-m"}]
+(gdb) 
+28^done,frame={level="0",addr="0x1000037c",func="main",file="src/main.c",fullname="/home/student/analog/cfs/2.1.0/062226_Test2/m4/src/main.c",line="24",arch="armv7e-m"}
+(gdb) 
+29^done,thread-ids={thread-id="2"},current-thread-id="2",number-of-threads="1"
+(gdb) 
+30^done,threads=[{id="2",target-id="Thread 1",details="Name: max32xxx.cpu, state: breakpoint",name="max32xxx.cpu",frame={level="0",addr="0x1000037c",func="main",args=[],file="src/main.c",fullname="/home/student/analog/cfs/2.1.0/062226_Test2/m4/src/main.c",line="24",arch="armv7e-m"},state="stopped"}]
+(gdb) 
+31^error,msg="-var-create: unable to create variable object"
+(gdb) 
+32^done,bkpt={number="4",type="breakpoint",disp="keep",enabled="y",addr="0x1000038c",func="main",file="src/main.c",fullname="/home/student/analog/cfs/2.1.0/062226_Test2/m4/src/main.c",line="31",thread-groups=["i1"],times="0",original-location="/home/student/analog/cfs/2.1.0/062226_Test2/m4/src/main.c:31"}
+(gdb) 
+33^done
+(gdb) 
+34^done,bkpt={number="5",type="breakpoint",disp="keep",enabled="y",addr="0x1000038c",func="main",file="src/main.c",fullname="/home/student/analog/cfs/2.1.0/062226_Test2/m4/src/main.c",line="31",thread-groups=["i1"],times="0",original-location="/home/student/analog/cfs/2.1.0/062226_Test2/m4/src/main.c:31"}
+(gdb) 
+35^done,bkpt={number="6",type="breakpoint",disp="keep",enabled="y",addr="0x1000039a",func="main",file="src/main.c",fullname="/home/student/analog/cfs/2.1.0/062226_Test2/m4/src/main.c",line="33",thread-groups=["i1"],times="0",original-location="/home/student/analog/cfs/2.1.0/062226_Test2/m4/src/main.c:33"}
+(gdb) 
+36^running
+*running,thread-id="all"
+(gdb) 
+=breakpoint-modified,bkpt={number="5",type="breakpoint",disp="keep",enabled="y",addr="0x1000038c",func="main",file="src/main.c",fullname="/home/student/analog/cfs/2.1.0/062226_Test2/m4/src/main.c",line="31",thread-groups=["i1"],times="1",original-location="/home/student/analog/cfs/2.1.0/062226_Test2/m4/src/main.c:31"}
+~"\n"
+~"Thread 2 \"max32xxx.cpu\" hit Breakpoint 5, main () at src/main.c:31\n"
+~"31\t        MXC_Delay(500000);\n"
+*stopped,reason="breakpoint-hit",disp="keep",bkptno="5",frame={addr="0x1000038c",func="main",args=[],file="src/main.c",fullname="/home/student/analog/cfs/2.1.0/062226_Test2/m4/src/main.c",line="31",arch="armv7e-m"},thread-id="2",stopped-threads="all"
+37^done,thread-ids={thread-id="2"},current-thread-id="2",number-of-threads="1"
+(gdb) 
+~"The target architecture is set to \"auto\" (currently \"armv7e-m\").\n"
+38^done
+(gdb) 
+39^done,threads=[{id="2",target-id="Thread 1",details="Name: max32xxx.cpu, state: breakpoint",name="max32xxx.cpu",frame={level="0",addr="0x1000038c",func="main",args=[],file="src/main.c",fullname="/home/student/analog/cfs/2.1.0/062226_Test2/m4/src/main.c",line="31",arch="armv7e-m"},state="stopped"}]
+(gdb) 
+40^done,stack=[frame={level="0",addr="0x1000038c",func="main",file="src/main.c",fullname="/home/student/analog/cfs/2.1.0/062226_Test2/m4/src/main.c",line="31",arch="armv7e-m"}]
+(gdb) 
+41^done,frame={level="0",addr="0x1000038c",func="main",file="src/main.c",fullname="/home/student/analog/cfs/2.1.0/062226_Test2/m4/src/main.c",line="31",arch="armv7e-m"}
+(gdb) 
+42^done,variables=[{name="count",type="int",value="0"}]
+(gdb) 
+43^done,name="var_count_8192",numchild="0",value="0",type="int",has_more="0"
+(gdb) 
+44^running
+*running,thread-id="all"
+(gdb) 
+=breakpoint-modified,bkpt={number="6",type="breakpoint",disp="keep",enabled="y",addr="0x1000039a",func="main",file="src/main.c",fullname="/home/student/analog/cfs/2.1.0/062226_Test2/m4/src/main.c",line="33",thread-groups=["i1"],times="1",original-location="/home/student/analog/cfs/2.1.0/062226_Test2/m4/src/main.c:33"}
+~"\n"
+~"Thread 2 \"max32xxx.cpu\" hit Breakpoint 6, main () at src/main.c:33\n"
+~"33\t        MXC_Delay(500000);\n"
+*stopped,reason="breakpoint-hit",disp="keep",bkptno="6",frame={addr="0x1000039a",func="main",args=[],file="src/main.c",fullname="/home/student/analog/cfs/2.1.0/062226_Test2/m4/src/main.c",line="33",arch="armv7e-m"},thread-id="2",stopped-threads="all"
+~"The target architecture is set to \"auto\" (currently \"armv7e-m\").\n"
+45^done
+(gdb) 
+46^done,thread-ids={thread-id="2"},current-thread-id="2",number-of-threads="1"
+(gdb) 
+47^done,threads=[{id="2",target-id="Thread 1",details="Name: max32xxx.cpu, state: breakpoint",name="max32xxx.cpu",frame={level="0",addr="0x1000039a",func="main",args=[],file="src/main.c",fullname="/home/student/analog/cfs/2.1.0/062226_Test2/m4/src/main.c",line="33",arch="armv7e-m"},state="stopped"}]
+(gdb) 
+48^done,stack=[frame={level="0",addr="0x1000039a",func="main",file="src/main.c",fullname="/home/student/analog/cfs/2.1.0/062226_Test2/m4/src/main.c",line="33",arch="armv7e-m"}]
+(gdb) 
+49^done,frame={level="0",addr="0x1000039a",func="main",file="src/main.c",fullname="/home/student/analog/cfs/2.1.0/062226_Test2/m4/src/main.c",line="33",arch="armv7e-m"}
+(gdb) 
+50^done,variables=[{name="count",type="int",value="0"}]
+(gdb) 
+51^done,changelist=[]
+(gdb) 
+@"SWD DPIDR 0x2ba01477\n"
+@"[max32xxx.cpu] halted due to breakpoint, current mode: Thread \n"
+@"xPSR: 0x81000000 pc: 0x00002124 msp: 0x20003ff0\n"
+52^done
+(gdb) 
+53^done,bkpt={number="7",type="breakpoint",disp="del",enabled="y",addr="0x1000037c",func="main",file="src/main.c",fullname="/home/student/analog/cfs/2.1.0/062226_Test2/m4/src/main.c",line="24",thread-groups=["i1"],times="0",original-location="-function main"}
+(gdb) 
+54^running
+*running,thread-id="all"
+(gdb) 
+=breakpoint-modified,bkpt={number="7",type="breakpoint",disp="del",enabled="y",addr="0x1000037c",func="main",file="src/main.c",fullname="/home/student/analog/cfs/2.1.0/062226_Test2/m4/src/main.c",line="24",thread-groups=["i1"],times="1",original-location="-function main"}
+~"\n"
+~"Thread 2 \"max32xxx.cpu\" hit Temporary breakpoint 7, main () at src/main.c:24\n"
+~"24\tint main(void) {\n"
+*stopped,reason="breakpoint-hit",disp="del",bkptno="7",frame={addr="0x1000037c",func="main",args=[],file="src/main.c",fullname="/home/student/analog/cfs/2.1.0/062226_Test2/m4/src/main.c",line="24",arch="armv7e-m"},thread-id="2",stopped-threads="all"
+=breakpoint-deleted,id="7"
+55^done,thread-ids={thread-id="2"},current-thread-id="2",number-of-threads="1"
+(gdb) 
+~"The target architecture is set to \"auto\" (currently \"armv7e-m\").\n"
+56^done
+(gdb) 
+57^done,threads=[{id="2",target-id="Thread 1",details="Name: max32xxx.cpu, state: breakpoint",name="max32xxx.cpu",frame={level="0",addr="0x1000037c",func="main",args=[],file="src/main.c",fullname="/home/student/analog/cfs/2.1.0/062226_Test2/m4/src/main.c",line="24",arch="armv7e-m"},state="stopped"}]
+(gdb) 
+58^done,stack=[frame={level="0",addr="0x1000037c",func="main",file="src/main.c",fullname="/home/student/analog/cfs/2.1.0/062226_Test2/m4/src/main.c",line="24",arch="armv7e-m"}]
+(gdb) 
+59^done,frame={level="0",addr="0x1000037c",func="main",file="src/main.c",fullname="/home/student/analog/cfs/2.1.0/062226_Test2/m4/src/main.c",line="24",arch="armv7e-m"}
+(gdb) 
+60^done,variables=[{name="count",type="int",value="<optimized out>"}]
+(gdb) 
+61^done,changelist=[{name="var_count_8192",value="<optimized out>",in_scope="true",type_changed="false",has_more="0"}]
+(gdb) 
+62^running
+*running,thread-id="all"
+(gdb) 
+=breakpoint-modified,bkpt={number="5",type="breakpoint",disp="keep",enabled="y",addr="0x1000038c",func="main",file="src/main.c",fullname="/home/student/analog/cfs/2.1.0/062226_Test2/m4/src/main.c",line="31",thread-groups=["i1"],times="2",original-location="/home/student/analog/cfs/2.1.0/062226_Test2/m4/src/main.c:31"}
+~"\n"
+~"Thread 2 \"max32xxx.cpu\" hit Breakpoint 5, main () at src/main.c:31\n"
+~"31\t        MXC_Delay(500000);\n"
+*stopped,reason="breakpoint-hit",disp="keep",bkptno="5",frame={addr="0x1000038c",func="main",args=[],file="src/main.c",fullname="/home/student/analog/cfs/2.1.0/062226_Test2/m4/src/main.c",line="31",arch="armv7e-m"},thread-id="2",stopped-threads="all"
+63^done,thread-ids={thread-id="2"},current-thread-id="2",number-of-threads="1"
+(gdb) 
+~"The target architecture is set to \"auto\" (currently \"armv7e-m\").\n"
+64^done
+(gdb) 
+65^done,threads=[{id="2",target-id="Thread 1",details="Name: max32xxx.cpu, state: breakpoint",name="max32xxx.cpu",frame={level="0",addr="0x1000038c",func="main",args=[],file="src/main.c",fullname="/home/student/analog/cfs/2.1.0/062226_Test2/m4/src/main.c",line="31",arch="armv7e-m"},state="stopped"}]
+(gdb) 
+66^done,stack=[frame={level="0",addr="0x1000038c",func="main",file="src/main.c",fullname="/home/student/analog/cfs/2.1.0/062226_Test2/m4/src/main.c",line="31",arch="armv7e-m"}]
+(gdb) 
+67^done,frame={level="0",addr="0x1000038c",func="main",file="src/main.c",fullname="/home/student/analog/cfs/2.1.0/062226_Test2/m4/src/main.c",line="31",arch="armv7e-m"}
+(gdb) 
+68^done,variables=[{name="count",type="int",value="0"}]
+(gdb) 
+69^done,changelist=[{name="var_count_8192",value="0",in_scope="true",type_changed="false",has_more="0"}]
+(gdb) 
+70^running
+*running,thread-id="all"
+(gdb) 
+*stopped,reason="end-stepping-range",frame={addr="0x10000394",func="main",args=[],file="src/main.c",fullname="/home/student/analog/cfs/2.1.0/062226_Test2/m4/src/main.c",line="32",arch="armv7e-m"},thread-id="2",stopped-threads="all"
+71^done,thread-ids={thread-id="2"},current-thread-id="2",number-of-threads="1"
+(gdb) 
+~"The target architecture is set to \"auto\" (currently \"armv7e-m\").\n"
+72^done
+(gdb) 
+73^done,threads=[{id="2",target-id="Thread 1",details="Name: max32xxx.cpu, state: breakpoint",name="max32xxx.cpu",frame={level="0",addr="0x10000394",func="main",args=[],file="src/main.c",fullname="/home/student/analog/cfs/2.1.0/062226_Test2/m4/src/main.c",line="32",arch="armv7e-m"},state="stopped"}]
+(gdb) 
+74^done,stack=[frame={level="0",addr="0x10000394",func="main",file="src/main.c",fullname="/home/student/analog/cfs/2.1.0/062226_Test2/m4/src/main.c",line="32",arch="armv7e-m"}]
+(gdb) 
+75^done,frame={level="0",addr="0x10000394",func="main",file="src/main.c",fullname="/home/student/analog/cfs/2.1.0/062226_Test2/m4/src/main.c",line="32",arch="armv7e-m"}
+(gdb) 
+76^done,variables=[{name="count",type="int",value="0"}]
+(gdb) 
+77^done,changelist=[]
+(gdb) 
+78^running
+*running,thread-id="all"
+(gdb) 
+=breakpoint-modified,bkpt={number="6",type="breakpoint",disp="keep",enabled="y",addr="0x1000039a",func="main",file="src/main.c",fullname="/home/student/analog/cfs/2.1.0/062226_Test2/m4/src/main.c",line="33",thread-groups=["i1"],times="2",original-location="/home/student/analog/cfs/2.1.0/062226_Test2/m4/src/main.c:33"}
+~"\n"
+~"Thread 2 \"max32xxx.cpu\" hit Breakpoint 6, main () at src/main.c:33\n"
+~"33\t        MXC_Delay(500000);\n"
+*stopped,reason="breakpoint-hit",disp="keep",bkptno="6",frame={addr="0x1000039a",func="main",args=[],file="src/main.c",fullname="/home/student/analog/cfs/2.1.0/062226_Test2/m4/src/main.c",line="33",arch="armv7e-m"},thread-id="2",stopped-threads="all"
+79^done,thread-ids={thread-id="2"},current-thread-id="2",number-of-threads="1"
+(gdb) 
+~"The target architecture is set to \"auto\" (currently \"armv7e-m\").\n"
+80^done
+(gdb) 
+81^done,threads=[{id="2",target-id="Thread 1",details="Name: max32xxx.cpu, state: breakpoint",name="max32xxx.cpu",frame={level="0",addr="0x1000039a",func="main",args=[],file="src/main.c",fullname="/home/student/analog/cfs/2.1.0/062226_Test2/m4/src/main.c",line="33",arch="armv7e-m"},state="stopped"}]
+(gdb) 
+82^done,stack=[frame={level="0",addr="0x1000039a",func="main",file="src/main.c",fullname="/home/student/analog/cfs/2.1.0/062226_Test2/m4/src/main.c",line="33",arch="armv7e-m"}]
+(gdb) 
+83^done,frame={level="0",addr="0x1000039a",func="main",file="src/main.c",fullname="/home/student/analog/cfs/2.1.0/062226_Test2/m4/src/main.c",line="33",arch="armv7e-m"}
+(gdb) 
+84^done,variables=[{name="count",type="int",value="0"}]
+(gdb) 
+85^done,changelist=[]
+(gdb) 
+86^running
+*running,thread-id="all"
+(gdb) 
+*stopped,reason="end-stepping-range",frame={addr="0x100003a0",func="main",args=[],file="src/main.c",fullname="/home/student/analog/cfs/2.1.0/062226_Test2/m4/src/main.c",line="34",arch="armv7e-m"},thread-id="2",stopped-threads="all"
+87^done,thread-ids={thread-id="2"},current-thread-id="2",number-of-threads="1"
+(gdb) 
+~"The target architecture is set to \"auto\" (currently \"armv7e-m\").\n"
+88^done
+(gdb) 
+89^done,threads=[{id="2",target-id="Thread 1",details="Name: max32xxx.cpu, state: breakpoint",name="max32xxx.cpu",frame={level="0",addr="0x100003a0",func="main",args=[],file="src/main.c",fullname="/home/student/analog/cfs/2.1.0/062226_Test2/m4/src/main.c",line="34",arch="armv7e-m"},state="stopped"}]
+(gdb) 
+90^done,stack=[frame={level="0",addr="0x100003a0",func="main",file="src/main.c",fullname="/home/student/analog/cfs/2.1.0/062226_Test2/m4/src/main.c",line="34",arch="armv7e-m"}]
+(gdb) 
+91^running
+*running,thread-id="all"
+(gdb) 
+*stopped,reason="end-stepping-range",frame={addr="0x100003aa",func="main",args=[],file="src/main.c",fullname="/home/student/analog/cfs/2.1.0/062226_Test2/m4/src/main.c",line="29",arch="armv7e-m"},thread-id="2",stopped-threads="all"
+92^done,thread-ids={thread-id="2"},current-thread-id="2",number-of-threads="1"
+(gdb) 
+~"The target architecture is set to \"auto\" (currently \"armv7e-m\").\n"
+93^done
+(gdb) 
+94^done,threads=[{id="2",target-id="Thread 1",details="Name: max32xxx.cpu, state: breakpoint",name="max32xxx.cpu",frame={level="0",addr="0x100003aa",func="main",args=[],file="src/main.c",fullname="/home/student/analog/cfs/2.1.0/062226_Test2/m4/src/main.c",line="29",arch="armv7e-m"},state="stopped"}]
+(gdb) 
+95^done,stack=[frame={level="0",addr="0x100003aa",func="main",file="src/main.c",fullname="/home/student/analog/cfs/2.1.0/062226_Test2/m4/src/main.c",line="29",arch="armv7e-m"}]
+(gdb) 
+96^done,frame={level="0",addr="0x100003aa",func="main",file="src/main.c",fullname="/home/student/analog/cfs/2.1.0/062226_Test2/m4/src/main.c",line="29",arch="armv7e-m"}
+(gdb) 
+97^done,variables=[{name="count",type="int",value="1"}]
+(gdb) 
+98^done,changelist=[{name="var_count_8192",value="1",in_scope="true",type_changed="false",has_more="0"}]
+(gdb) 
+99^running
+*running,thread-id="all"
+(gdb) 
+*stopped,reason="end-stepping-range",frame={addr="0x10000386",func="main",args=[],file="src/main.c",fullname="/home/student/analog/cfs/2.1.0/062226_Test2/m4/src/main.c",line="30",arch="armv7e-m"},thread-id="2",stopped-threads="all"
+100^done,thread-ids={thread-id="2"},current-thread-id="2",number-of-threads="1"
+(gdb) 
+~"The target architecture is set to \"auto\" (currently \"armv7e-m\").\n"
+101^done
+(gdb) 
+102^done,threads=[{id="2",target-id="Thread 1",details="Name: max32xxx.cpu, state: single-step",name="max32xxx.cpu",frame={level="0",addr="0x10000386",func="main",args=[],file="src/main.c",fullname="/home/student/analog/cfs/2.1.0/062226_Test2/m4/src/main.c",line="30",arch="armv7e-m"},state="stopped"}]
+(gdb) 
+103^done,stack=[frame={level="0",addr="0x10000386",func="main",file="src/main.c",fullname="/home/student/analog/cfs/2.1.0/062226_Test2/m4/src/main.c",line="30",arch="armv7e-m"}]
+(gdb) 
+104^done,frame={level="0",addr="0x10000386",func="main",file="src/main.c",fullname="/home/student/analog/cfs/2.1.0/062226_Test2/m4/src/main.c",line="30",arch="armv7e-m"}
+(gdb) 
+105^done,variables=[{name="count",type="int",value="1"}]
+(gdb) 
+106^done,changelist=[]
+(gdb) 
+107^running
+*running,thread-id="all"
+(gdb) 
+=breakpoint-modified,bkpt={number="5",type="breakpoint",disp="keep",enabled="y",addr="0x1000038c",func="main",file="src/main.c",fullname="/home/student/analog/cfs/2.1.0/062226_Test2/m4/src/main.c",line="31",thread-groups=["i1"],times="3",original-location="/home/student/analog/cfs/2.1.0/062226_Test2/m4/src/main.c:31"}
+~"\n"
+~"Thread 2 \"max32xxx.cpu\" hit Breakpoint 5, main () at src/main.c:31\n"
+~"31\t        MXC_Delay(500000);\n"
+*stopped,reason="breakpoint-hit",disp="keep",bkptno="5",frame={addr="0x1000038c",func="main",args=[],file="src/main.c",fullname="/home/student/analog/cfs/2.1.0/062226_Test2/m4/src/main.c",line="31",arch="armv7e-m"},thread-id="2",stopped-threads="all"
+108^done,thread-ids={thread-id="2"},current-thread-id="2",number-of-threads="1"
+(gdb) 
+~"The target architecture is set to \"auto\" (currently \"armv7e-m\").\n"
+109^done
+(gdb) 
+110^done,threads=[{id="2",target-id="Thread 1",details="Name: max32xxx.cpu, state: breakpoint",name="max32xxx.cpu",frame={level="0",addr="0x1000038c",func="main",args=[],file="src/main.c",fullname="/home/student/analog/cfs/2.1.0/062226_Test2/m4/src/main.c",line="31",arch="armv7e-m"},state="stopped"}]
+(gdb) 
+111^done,stack=[frame={level="0",addr="0x1000038c",func="main",file="src/main.c",fullname="/home/student/analog/cfs/2.1.0/062226_Test2/m4/src/main.c",line="31",arch="armv7e-m"}]
+(gdb) 
+112^done,frame={level="0",addr="0x1000038c",func="main",file="src/main.c",fullname="/home/student/analog/cfs/2.1.0/062226_Test2/m4/src/main.c",line="31",arch="armv7e-m"}
+(gdb) 
+113^done,variables=[{name="count",type="int",value="1"}]
+(gdb) 
+114^done,changelist=[]
+(gdb) 
+115^running
+*running,thread-id="all"
+(gdb) 
+*stopped,reason="end-stepping-range",frame={addr="0x10000394",func="main",args=[],file="src/main.c",fullname="/home/student/analog/cfs/2.1.0/062226_Test2/m4/src/main.c",line="32",arch="armv7e-m"},thread-id="2",stopped-threads="all"
+116^done,thread-ids={thread-id="2"},current-thread-id="2",number-of-threads="1"
+(gdb) 
+~"The target architecture is set to \"auto\" (currently \"armv7e-m\").\n"
+117^done
+(gdb) 
+118^done,threads=[{id="2",target-id="Thread 1",details="Name: max32xxx.cpu, state: breakpoint",name="max32xxx.cpu",frame={level="0",addr="0x10000394",func="main",args=[],file="src/main.c",fullname="/home/student/analog/cfs/2.1.0/062226_Test2/m4/src/main.c",line="32",arch="armv7e-m"},state="stopped"}]
+(gdb) 
+119^done,stack=[frame={level="0",addr="0x10000394",func="main",file="src/main.c",fullname="/home/student/analog/cfs/2.1.0/062226_Test2/m4/src/main.c",line="32",arch="armv7e-m"}]
+(gdb) 
+120^done,frame={level="0",addr="0x10000394",func="main",file="src/main.c",fullname="/home/student/analog/cfs/2.1.0/062226_Test2/m4/src/main.c",line="32",arch="armv7e-m"}
+(gdb) 
+121^done,variables=[{name="count",type="int",value="1"}]
+(gdb) 
+122^done,changelist=[]
+(gdb) 
+123^running
+*running,thread-id="all"
+(gdb) 
+=breakpoint-modified,bkpt={number="6",type="breakpoint",disp="keep",enabled="y",addr="0x1000039a",func="main",file="src/main.c",fullname="/home/student/analog/cfs/2.1.0/062226_Test2/m4/src/main.c",line="33",thread-groups=["i1"],times="3",original-location="/home/student/analog/cfs/2.1.0/062226_Test2/m4/src/main.c:33"}
+~"\n"
+~"Thread 2 \"max32xxx.cpu\" hit Breakpoint 6, main () at src/main.c:33\n"
+~"33\t        MXC_Delay(500000);\n"
+*stopped,reason="breakpoint-hit",disp="keep",bkptno="6",frame={addr="0x1000039a",func="main",args=[],file="src/main.c",fullname="/home/student/analog/cfs/2.1.0/062226_Test2/m4/src/main.c",line="33",arch="armv7e-m"},thread-id="2",stopped-threads="all"
+124^done,thread-ids={thread-id="2"},current-thread-id="2",number-of-threads="1"
+(gdb) 
+~"The target architecture is set to \"auto\" (currently \"armv7e-m\").\n"
+125^done
+(gdb) 
+126^done,threads=[{id="2",target-id="Thread 1",details="Name: max32xxx.cpu, state: breakpoint",name="max32xxx.cpu",frame={level="0",addr="0x1000039a",func="main",args=[],file="src/main.c",fullname="/home/student/analog/cfs/2.1.0/062226_Test2/m4/src/main.c",line="33",arch="armv7e-m"},state="stopped"}]
+(gdb) 
+127^done,stack=[frame={level="0",addr="0x1000039a",func="main",file="src/main.c",fullname="/home/student/analog/cfs/2.1.0/062226_Test2/m4/src/main.c",line="33",arch="armv7e-m"}]
+(gdb) 
+128^done,frame={level="0",addr="0x1000039a",func="main",file="src/main.c",fullname="/home/student/analog/cfs/2.1.0/062226_Test2/m4/src/main.c",line="33",arch="armv7e-m"}
+(gdb) 
+129^done,variables=[{name="count",type="int",value="1"}]
+(gdb) 
+130^done,changelist=[]
+(gdb) 
+131^running
+*running,thread-id="all"
+(gdb) 
+*stopped,reason="end-stepping-range",frame={addr="0x100003a0",func="main",args=[],file="src/main.c",fullname="/home/student/analog/cfs/2.1.0/062226_Test2/m4/src/main.c",line="34",arch="armv7e-m"},thread-id="2",stopped-threads="all"
+132^done,thread-ids={thread-id="2"},current-thread-id="2",number-of-threads="1"
+(gdb) 
+~"The target architecture is set to \"auto\" (currently \"armv7e-m\").\n"
+133^done
+(gdb) 
+134^done,threads=[{id="2",target-id="Thread 1",details="Name: max32xxx.cpu, state: breakpoint",name="max32xxx.cpu",frame={level="0",addr="0x100003a0",func="main",args=[],file="src/main.c",fullname="/home/student/analog/cfs/2.1.0/062226_Test2/m4/src/main.c",line="34",arch="armv7e-m"},state="stopped"}]
+(gdb) 
+135^done,stack=[frame={level="0",addr="0x100003a0",func="main",file="src/main.c",fullname="/home/student/analog/cfs/2.1.0/062226_Test2/m4/src/main.c",line="34",arch="armv7e-m"}]
+(gdb) 
+136^running
+*running,thread-id="all"
+(gdb) 
+*stopped,reason="end-stepping-range",frame={addr="0x100003aa",func="main",args=[],file="src/main.c",fullname="/home/student/analog/cfs/2.1.0/062226_Test2/m4/src/main.c",line="29",arch="armv7e-m"},thread-id="2",stopped-threads="all"
+137^done,thread-ids={thread-id="2"},current-thread-id="2",number-of-threads="1"
+(gdb) 
+~"The target architecture is set to \"auto\" (currently \"armv7e-m\").\n"
+138^done
+(gdb) 
+139^done,threads=[{id="2",target-id="Thread 1",details="Name: max32xxx.cpu, state: breakpoint",name="max32xxx.cpu",frame={level="0",addr="0x100003aa",func="main",args=[],file="src/main.c",fullname="/home/student/analog/cfs/2.1.0/062226_Test2/m4/src/main.c",line="29",arch="armv7e-m"},state="stopped"}]
+(gdb) 
+140^done,stack=[frame={level="0",addr="0x100003aa",func="main",file="src/main.c",fullname="/home/student/analog/cfs/2.1.0/062226_Test2/m4/src/main.c",line="29",arch="armv7e-m"}]
+(gdb) 
+141^done,frame={level="0",addr="0x100003aa",func="main",file="src/main.c",fullname="/home/student/analog/cfs/2.1.0/062226_Test2/m4/src/main.c",line="29",arch="armv7e-m"}
+(gdb) 
+142^done,variables=[{name="count",type="int",value="2"}]
+(gdb) 
+143^done,changelist=[{name="var_count_8192",value="2",in_scope="true",type_changed="false",has_more="0"}]
+(gdb) 
+144^done
+(gdb) 
+145^done,bkpt={number="8",type="breakpoint",disp="keep",enabled="y",addr="0x1000039a",func="main",file="src/main.c",fullname="/home/student/analog/cfs/2.1.0/062226_Test2/m4/src/main.c",line="33",thread-groups=["i1"],times="0",original-location="/home/student/analog/cfs/2.1.0/062226_Test2/m4/src/main.c:33"}
+(gdb) 
+146^done
+(gdb) 
+147^running
+*running,thread-id="all"
+(gdb) 
+148^done
+(gdb) 
+~"\nThread "
+~"2 \"max32xxx.cpu\" received signal SIGINT, Interrupt.\n"
+~"0x1000173e in MXC_Delay (us=us@entry=500000) at /home/student/.local/share/com.analog.cfs/packages/conan/p/msdk8c9ed4d433027/p/Libraries/CMSIS/../PeriphDrivers/Source/SYS/mxc_delay.c:243\n"
+~"243\t    while (SysTick->VAL > endtick) {}\n"
+*stopped,reason="signal-received",signal-name="SIGINT",signal-meaning="Interrupt",frame={addr="0x1000173e",func="MXC_Delay",args=[{name="us",value="500000"},{name="us@entry",value="500000"}],file="/home/student/.local/share/com.analog.cfs/packages/conan/p/msdk8c9ed4d433027/p/Libraries/CMSIS/../PeriphDrivers/Source/SYS/mxc_delay.c",fullname="/home/student/.local/share/com.analog.cfs/packages/conan/p/msdk8c9ed4d433027/p/Libraries/PeriphDrivers/Source/SYS/mxc_delay.c",line="243",arch="armv7e-m"},thread-id="2",stopped-threads="all"
+149^done
+(gdb) 
+=thread-exited,id="2",group-id="i1"
+=thread-group-exited,id="i1"
+~"[Inferior 1 (Remote target) detached]\n"
+150^done
+(gdb) 
+151^done
+(gdb) 
+^exit
