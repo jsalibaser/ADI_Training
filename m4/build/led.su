@@ -1,4 +1,0 @@
-/home/student/.local/share/com.analog.cfs/packages/conan/p/msdk8c9ed4d433027/p/Libraries/MiscDrivers/LED/led.c:44:6:LED_On	8	static
-/home/student/.local/share/com.analog.cfs/packages/conan/p/msdk8c9ed4d433027/p/Libraries/MiscDrivers/LED/led.c:55:6:LED_Off	8	static
-/home/student/.local/share/com.analog.cfs/packages/conan/p/msdk8c9ed4d433027/p/Libraries/MiscDrivers/LED/led.c:26:5:LED_Init	16	static
-/home/student/.local/share/com.analog.cfs/packages/conan/p/msdk8c9ed4d433027/p/Libraries/MiscDrivers/LED/led.c:66:6:LED_Toggle	8	static
